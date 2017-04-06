@@ -34,7 +34,7 @@
   },
   "dependencies": {},
   "config": {
-    "nwjsBuildVersion": "0.20.3",
+    "nwjsBuildVersion": "0.21.5",
     "nwjsBuildPlatforms": [
       "win64"
     ],

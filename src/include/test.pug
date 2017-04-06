@@ -1,3 +1,8 @@
-.test__time(data-bind="text: currentTime, css: {test__spinner: !currentTime()}")
-.test__version Version:
-    span(data-bind="text: appVersion")
+.test__container
+    .test__itemA A
+    .test__itemB B
+        .test__time(data-bind="text: currentTime, css: {test__spinner: !currentTime()}")
+    .test__itemC C
+    .test__itemD D
+        .test__version Version:
+            span(data-bind="text: appVersion")

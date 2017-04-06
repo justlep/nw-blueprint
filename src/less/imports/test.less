@@ -1,25 +1,64 @@
 .test {
+
+    &__container {
+        display: grid;
+        height: 100%;
+        grid-template-columns: auto 50px 100px;
+        grid-template-rows: 10% auto 10%;
+        grid-template-areas:
+            "header header header"
+            "main main sidebar"
+            "footer footer footer";
+
+        @media only screen and (max-width: 600px) {
+            grid-template-areas:
+                "main header"
+                "main sidebar"
+                "footer footer";
+            grid-template-columns: auto 100px;
+            grid-template-rows: 100px auto 10%;
+        }
+    }
+
+    &__itemA {
+        grid-area: header;
+        background: red;
+    }
+    &__itemB {
+        grid-area: main;
+        background: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__itemC {
+        grid-area: sidebar;
+        background: orange;
+    }
+    &__itemD {
+        grid-area: footer;
+        background: yellow;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
     &__spinner {
         @imagePath: '../../images/spinner.gif';
         min-height: image-height(@imagePath);
+        min-width: image-width(@imagePath);
         background: transparent url(@imagePath) center center no-repeat;
     }
 
     &__time {
-        position: fixed;
-        top: 48%;
-        left: 0;
-        right: 0;
-        text-align: center;
+        color: #fff;
         font-size: 3vw;
     }
 
     &__version {
-        position: fixed;
-        right: 0;
-        bottom: 0;
         color: red;
         font-size: 20px;
-        padding: 10px;
     }
 }
