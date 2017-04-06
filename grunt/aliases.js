@@ -22,8 +22,8 @@ module.exports = function (grunt, options) {
         'clean',
         'default',
         'copy:srcToPrepareBuild',
-        'nwjsBuild'
-        //, 'clean:oldPreparedBuild'
+        'nwjsBuild',
+        'clean:oldPreparedBuild'
     ]);
 
     grunt.registerTask('zipBuild', [
