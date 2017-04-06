@@ -1,10 +1,11 @@
-module.exports = function (/*grunt, options*/) {
-    'use strict';
+module.exports = function (grunt, options) {
+
+    let appName = grunt.file.readJSON('src/package.json').name;
+
     return {
-        options: {
-        },
-        oldPreparedBuild: ["build/preparedBuild"],
-        oldBuild: ["build/Synchronizer"],
-        oldZips: ["build/*.zip"]
+        options: {},
+        oldPreparedBuild: ['build/preparedBuild'],
+        oldBuild: ['build/' + appName],
+        oldZips: ['build/*.zip']
     };
 };
