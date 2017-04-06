@@ -37,6 +37,7 @@
     "nwjsBuildVersion": "0.20.3",
     "nwjsBuildPlatforms": [
       "win64"
-    ]
+    ],
+    "nwjsZipSources": false
   }
 }
