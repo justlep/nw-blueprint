@@ -1,0 +1,20 @@
+{
+  "name": "nw-blueprint-app",
+  "version": "0.0.1",
+  "description": "Some description goes here...",
+  "author": "The Author",
+  "main": "index.html",
+  "chromium-args": "--mixed-context",
+  "window": {
+    "id": "nw_blueprint",
+    "title": "NW Blueprint Application",
+    "frame": true,
+    "width": 900,
+    "height": 700,
+    "min_width": 500,
+    "min_height": 650
+  },
+  "webkit": {
+    "plugin": false
+  }
+}

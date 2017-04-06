@@ -1,0 +1,9 @@
+{
+  "name": "nw-blueprint",
+  "private": true,
+  "authors": [
+    "Lennart Pegel <github@justlep.net>"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

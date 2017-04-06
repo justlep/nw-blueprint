@@ -1,0 +1,25 @@
+.test {
+    &__spinner {
+        @imagePath: '../../images/spinner.gif';
+        min-height: image-height(@imagePath);
+        background: transparent url(@imagePath) center center no-repeat;
+    }
+
+    &__time {
+        position: fixed;
+        top: 48%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    &__version {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        color: red;
+        font-size: 20px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "nw-blueprint",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justlep/nw-blueprint.git"
+  },
+  "engines": {
+    "node": ">=6.1"
+  },
+  "scripts": {
+    "start": "grunt runDebug"
+  },
+  "description": "Blueprint for building NWJS applications using PUG, LESS and Knockout",
+  "main": "Gruntfile.js",
+  "author": "Lennart Pegel <github@justlep.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-cli": "~1.2.0",
+    "grunt-concurrent": "~2.3.1",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-compress": "~1.4.1",
+    "grunt-contrib-copy": "~1.0.0",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-less": "~1.4.1",
+    "grunt-contrib-pug": "~1.0.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-newer": "~1.2.0",
+    "load-grunt-config": "~0.19.2",
+    "load-grunt-tasks": "~3.5.2",
+    "nw-builder": "~3.2.0",
+    "time-grunt": "~1.4.0"
+  },
+  "dependencies": {},
+  "config": {
+    "nwjsBuildVersion": "0.20.3",
+    "nwjsBuildPlatforms": [
+      "win64"
+    ]
+  }
+}
