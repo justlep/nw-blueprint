@@ -9,17 +9,14 @@ but should easily be adjustable for Linux/Mac.
 $ npm install
 ```
 
-## Run locally (with developer tools enabled, optionally start watchers)
+## Run locally (developer tools enabled via F12)
 ```sh
 $ grunt runDebug
-```
-
-## Run LESS/PUG watchers (auto-rebuild CSS/HTML when .less and .pug files change)
-```sh
+# optional watchers to auto-rebuild CSS/HTML when .less or .pug files are modified
 $ grunt watchLessAndPug
 ```
 
-## Build standalone application (uncompressed)
+## Build standalone application (no developer tools)
 ```sh
 $ grunt buildApp
 ```
