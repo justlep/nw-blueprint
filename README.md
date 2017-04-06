@@ -1,5 +1,5 @@
 # nw-blueprint
-A blueprint for quickly building NWJS-based applications using LESS, Pug and Knockout (or any other JS libraries).
+A project-blueprint for quickly building NWJS-based applications using Grunt, LESS, Pug and Knockout (or any other JS libraries).
 Based on NodeJS and Node-Webkit. Compileable to a standalone program (per default Win/64),
 but should easily be adjustable for Linux/Mac.
 
