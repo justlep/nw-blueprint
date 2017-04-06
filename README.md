@@ -21,10 +21,11 @@ $ grunt watchLessAndPug
 $ grunt buildApp
 ```
 
-After either build task, the executable standalone program is located in 
+After the successful build, the executable standalone application is located in 
 * **build/nw-blueprint-app/<platform>/**
 
-Build platforms are defined in the config section of package.json.
-Allowed platforms: ['win32', 'win64', 'osx32', 'osx64', 'linux32', 'linux64']
-See: https://github.com/nwjs/nw-builder
-
+## Configuration / Customization
+* The build platform (OS) and NWJS-version are defined in the `config`-section of [/package.json](./package.json)
+   * Allowed platforms: `'win32', 'win64', 'osx32', 'osx64', 'linux32', 'linux64'`  
+     See: https://github.com/nwjs/nw-builder
+* The App's name, window settings etc. are located in the app manifest file, [src/package.json](./src/package.json)
