@@ -6,6 +6,12 @@ let instance,
 
 
 class TestViewModel {
+
+    static getInstance() {
+        instance = instance || new TestViewModel();
+        return instance;
+    }
+
     constructor() {
         util.assert(!instance, 'Must use TestViewModel.getInstance()');
         instance = this;
@@ -26,11 +32,5 @@ class TestViewModel {
         }
     }
 }
-
-/** @static */
-TestViewModel.getInstance = function() {
-    instance = instance || new TestViewModel();
-    return instance;
-};
 
 module.exports = TestViewModel;
