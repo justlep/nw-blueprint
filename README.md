@@ -1,4 +1,4 @@
-# nw-blueprint
+# nw-blueprint [![Build Status](https://travis-ci.org/justlep/nw-blueprint.svg?branch=master)](https://travis-ci.org/justlep/nw-blueprint)
 A project-blueprint for quickly building NWJS-based applications using Grunt, LESS, Pug and Knockout (or any other JS libraries).
 Based on NodeJS and Node-Webkit. Compileable to a standalone program (per default Win/64),
 but should easily be adjustable for Linux/Mac.
