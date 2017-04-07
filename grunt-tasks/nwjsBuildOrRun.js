@@ -6,6 +6,23 @@
  */
 module.exports = function (grunt) {
 
+    function determinePlatformForRun() {
+        let osArch = /32/.test(process.arch) ? 32 : 64,
+            platform = process.platform,
+            nwPlatform = (/win\d+/.test(platform)) ? 'win' :
+                         (/darwin/).test(platform) ? 'osx' :
+                         (/linux/).test(platform) ? 'linux' : null;
+
+
+        if (!nwPlatform) {
+            throw new Error('Could not determine platform for NWBuilder: ', osArch, platform);
+        }
+
+        console.log(`Determined platform for NwBuilder: ${nwPlatform + osArch}`);
+
+        return [nwPlatform + osArch];
+    }
+
     function getNwjsInstance(doRun) {
         let doBuild = !doRun,
             path = require('path'),
@@ -19,7 +36,7 @@ module.exports = function (grunt) {
                 files: doBuild ? BUILD_SOURCES : RUN_SOURCES,
                 cacheDir: CACHE_DIR,
                 buildDir: BUILD_TARGET_DIR,
-                platforms: pkg.config.nwjsBuildPlatforms,
+                platforms: doBuild ? pkg.config.nwjsBuildPlatforms : determinePlatformForRun(),
                 version: pkg.config.nwjsBuildVersion,
                 zip: doBuild && pkg.config.nwjsZipSources !== false,
                 flavor: doRun ? 'sdk' : 'normal',
