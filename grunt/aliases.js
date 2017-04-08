@@ -4,12 +4,12 @@ module.exports = function (grunt, options) {
     grunt.registerTask('default', [
         'less',
         'jshint',
-        'pug'
+        'pug:forRun'
     ]);
 
     grunt.registerTask('watchLessAndPug', [
         'less',
-        'pug',
+        'pug:forRun',
         'concurrent:watchLessAndPug'
     ]);
 
@@ -20,7 +20,9 @@ module.exports = function (grunt, options) {
 
     grunt.registerTask('buildApp', [
         'clean',
-        'default',
+        'less',
+        'jshint',
+        'pug:forBuild',
         'copy:srcToPrepareBuild',
         'nwjsBuild',
         'clean:oldPreparedBuild'

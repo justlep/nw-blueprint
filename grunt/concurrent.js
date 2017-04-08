@@ -7,7 +7,8 @@ module.exports = function (grunt, cfg) {
         },
         watchLessAndPug: [
             'watch:less',
-            'watch:pug'
+            'watch:pug',
+            'watch:livereloadCss'
         ]
     };
 };

@@ -7,7 +7,17 @@ module.exports = function (grunt, options) {
         },
         pug: {
             files: ['src/**/*.pug'],
-            tasks: ['pug:html']
+            tasks: ['pug:forRun']
+        },
+        livereloadCss: {
+            files: ['src/css/**/*.css'],
+            tasks: [],
+            options: {
+                livereload: {
+                    host: 'localhost',
+                    port: '<%= pkg.config.liveReloadPort %>'
+                }
+            }
         }
     };
 };

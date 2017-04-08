@@ -1,0 +1,15 @@
+
+//- The ´isLiveReloadAllowed´ flag was set by the pug Grunt task -> see grunt/pug.js
+//- Making sure, the livereload-script is NEVER included in the final build
+if isLiveReloadAllowed
+    script.
+        //- Double-check to make sure the final build won't try to use the livereload port:
+        //- Only if the app is run locally (grunt runDebug), the current process will be the nw-executable from the cache-directory.
+        //- If so, we can safely write the script tag for livereload.
+        //- The livereload port is defined in the root package.json (available as `pkg` in the pug model here)
+        if (/^.+[\\\/]cache[\\\/]\d+\.\d+\.\d+-sdk[\\\/]/.test(process.argv||[''][0])) {
+            let js = document.createElement('script');
+            js.async = true;
+            js.src = 'http://localhost:#{pkg.config.liveReloadPort}/livereload.js';
+            document.head.appendChild(js);
+        }

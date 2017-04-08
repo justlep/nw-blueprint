@@ -1,19 +1,29 @@
 module.exports = function (grunt, options) {
     'use strict';
 
+    let pkg = grunt.file.readJSON('package.json'),
+        files = [{
+            expand: true,
+            src: ['./src/*.pug'],
+            ext: '.html'
+        }];
+
     return {
         options: {
-            pretty: true,
-            data: {
-                pkg: grunt.file.readJSON('package.json')
-            }
+            pretty: true
         },
-        html: {
-            files: [{
-                expand: true,
-                src: ['./src/*.pug'],
-                ext: '.html'
-            }]
+        forRun: {
+            files,
+            options:  {
+                data: {pkg, isLiveReloadAllowed: true}
+            },
+
+        },
+        forBuild: {
+            files,
+            options:  {
+                data: {pkg, isLiveReloadAllowed: false}
+            }
         }
     };
 };

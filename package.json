@@ -38,6 +38,7 @@
     "nwjsBuildPlatforms": [
       "win64"
     ],
-    "nwjsZipSources": false
+    "nwjsZipSources": false,
+    "liveReloadPort": 9998
   }
 }
