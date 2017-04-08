@@ -9,11 +9,13 @@ but should easily be adjustable for Linux/Mac.
 $ npm install
 ```
 
-## Run locally (developer tools enabled via F12)
+## Run locally (developer tools enabled)
 ```sh
-$ grunt runDebug
-# optional watchers to auto-rebuild CSS/HTML when .less or .pug files are modified
+# Optionally: start watchers first to auto-rebuild CSS/HTML when .less or .pug files are modified
+# (CSS changes will become visible immediately without restarting the app if `liveReload.pug` is included)
 $ grunt watchLessAndPug
+
+$ grunt runDebug
 ```
 
 ## Build standalone application (no developer tools)
@@ -22,7 +24,7 @@ $ grunt buildApp
 ```
 
 After the successful build, the executable standalone application is located in 
-* **build/nw-blueprint-app/<platform>/**
+* **build/nw-blueprint-app/\<platform>/**
 
 ## Configuration / Customization
 * The build platform (OS) and NWJS-version are defined in the `config`-section of [/package.json](./package.json)
